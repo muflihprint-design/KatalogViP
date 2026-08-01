@@ -188,21 +188,7 @@
                             
                             // Kembalikan hasil foto
                             resolve(blob);
-                        }, 250); // Durasi layar putih (250ms)
-                            
-                            // 4. Kembalikan Kamera ke Ukuran Semula (Mengecil)
-                            overlay.classList.remove('bg-white/95', 'flex', 'rounded-3xl');
-                            overlay.classList.add('bg-black/60', 'hidden', 'opacity-0');
-                            
-                            cameraContainer.className = "relative w-24 h-24 mx-auto mb-6 transition-all duration-500 ease-in-out z-10";
-                            videoEl.className = "w-full h-full object-cover rounded-full shadow-inner border-4 border-emerald-100 bg-slate-200 mirror-video transition-all duration-500";
-                            statusIcon.classList.remove('hidden');
-
-                            backdrop.classList.add('opacity-0');
-                            setTimeout(() => backdrop.classList.add('hidden'), 300);
-                            
-                            resolve(blob);
-                        }, 200); // Durasi jeda flash
+                        }, 250); // Durasi layar putih (250ms)             
                     }
                 }, 1000);
             });
